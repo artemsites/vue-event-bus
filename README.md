@@ -2,6 +2,10 @@
 
 A simple event bus allows different components to communicate with each other without direct parent-child coupling. This can be useful for global communication or for cases where components are at different levels of nesting.
 
+## Languages
+### Russian
+https://github.com/artemsites/vue-event-bus/blob/main/README.ru.md
+
 ## Usage
 
 To get started, import `EventBus` into your component:
