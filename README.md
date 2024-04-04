@@ -2,6 +2,8 @@
 
 A simple event bus allows different components to communicate with each other without direct parent-child coupling. This can be useful for global communication or for cases where components are at different levels of nesting.
 
+**Attention:** Using the event bus can lead to less predictable data flow and degraded code maintainability, so it is recommended to use this approach when other methods of communication between components are impossible or ineffective.
+
 ## Languages
 ### Russian
 https://github.com/artemsites/vue-event-bus/blob/main/README.ru.md
@@ -44,22 +46,22 @@ EventBus.emit('some-event', { text: 'Hello world!' });
 
 ### on(event, callback)
 
-- `event': The name of the event you want to subscribe to.
-- `callback': A callback function that will be called when an event occurs.
+- `event`: The name of the event you want to subscribe to.
+- `callback`: A callback function that will be called when an event occurs.
 
 ### off(event, callback)
 
-- `event': The name of the event you want to unsubscribe from.
-- `callback': The callback function that needs to be deleted.
+- `event`: The name of the event you want to unsubscribe from.
+- `callback`: The callback function that needs to be deleted.
 
 ### emit(event, ...args)
 
-- `event': The name of the event that you want to trigger.
+- `event`: The name of the event that you want to trigger.
 - `...args`: Arguments that will be passed to the callback function.
 
 ## Example
 
-``javascript
+```javascript
 // Subscribing
 to the EventBus.on('msg', (data) => {
 console.log(data);
@@ -70,6 +72,4 @@ EventBus.emit('msg', { text: 'This is a test message' });
 
 // When to unsubscribe from
 the EventBus.off event('msg', callback);
-``
-
-**Attention:** Using the event bus can lead to less predictable data flow and degraded code maintainability, so it is recommended to use this approach when other methods of communication between components are impossible or ineffective.
+```
