@@ -10,7 +10,7 @@ https://github.com/artemsites/vue-event-bus/blob/main/README.ru.md
 
 ## Usage
 
-To get started, import `EventBus` into your component:
+To get started, import `eventBus` into your component:
 
 ```javascript
 import eventBus from 'path/to/eventBus.vue.js';
@@ -22,7 +22,7 @@ Example of subscribing to the 'some-event' event:
 
 ```javascript
 eventBus.on('some-event', (payload) => {
-console.log('A some-event event occurred with the data:', payload);
+  console.log('A some-event event occurred with the data:', payload);
 });
 ```
 
@@ -39,7 +39,7 @@ eventBus.off('some-event', callback);
 An example of publishing a 'some-event' event with some data:
 
 ```javascript
-EventBus.emit('some-event', { text: 'Hello world!' });
+eventBus.emit('some-event', { text: 'Hello world!' });
 ```
 
 ## Methods
@@ -61,15 +61,15 @@ EventBus.emit('some-event', { text: 'Hello world!' });
 
 ## Example
 
-```javascript
-// Subscribing
-to the EventBus.on('msg', (data) => {
-console.log(data);
+```javascript 
+// Subscribing to the 
+eventBus.on('msg', (data) => {
+  console.log(data);
 });
 
 // Sending the event with all the necessary data
-EventBus.emit('msg', { text: 'This is a test message' });
+eventBus.emit('msg', { text: 'This is a test message' });
 
-// When to unsubscribe from
-the EventBus.off event('msg', callback);
+// When to unsubscribe from the
+eventBus.off event('msg', callback);
 ```
