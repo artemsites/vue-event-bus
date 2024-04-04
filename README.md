@@ -38,7 +38,7 @@ eventBus.off('some-event', callback);
 
 An example of publishing a 'some-event' event with some data:
 
-``javascript
+```javascript
 EventBus.emit('some-event', { text: 'Hello world!' });
 ```
 
