@@ -16,7 +16,7 @@ To get started, import `eventBus` into your component:
 import eventBus from 'path/to/eventBus.vue.js';
 ```
 
-### Event subscription (`on')
+### Event subscription (`on`)
 
 Example of subscribing to the 'some-event' event:
 
@@ -26,7 +26,7 @@ eventBus.on('some-event', (payload) => {
 });
 ```
 
-### Unsubscribe from the event (`off')
+### Unsubscribe from the event (`off`)
 
 Canceling a subscription to a 'some-event' using a specific callback function `callback`:
 
@@ -34,7 +34,7 @@ Canceling a subscription to a 'some-event' using a specific callback function `c
 eventBus.off('some-event', callback);
 ```
 
-### Publishing an event (`emit')
+### Publishing an event (`emit`)
 
 An example of publishing a 'some-event' event with some data:
 
